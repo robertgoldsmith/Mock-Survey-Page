@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,800;1,500&family=Nunito&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/sp_main.css">
+  <title>Survey Form</title>
+</head>
+<body>
+  <header></header>
+  
+  <main>
+    
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+    
+    <div id="wrapper">
+      
+      <form action="" id="survey-form">
+        <h1 id="title">Coding Survey</h1>
+        <p id="description">Please take a few minutes to complete our survey on learning to code.</p> 
+        <div class="form-control">
+          <label id="name-label" class="question" for="name">Name</label>
+          <input type="text" id="name" class="input-area"   placeholder="enter your full name" required>
+        </div>
+        
+        <div class="form-control">
+          <label id="email-label" class="question" for="email">Email</label>
+          <input type="email" id="email" class="input-area" placeholder="enter your email" inputmode="email" required>
+        </div>
+        
+        <div class="form-control">
+          <label id="number-label" class="question" for="number">Age</label>
+          <input type="number" class="input-area" id="number" min="10" max="75" placeholder="Age" inputmode="numeric">
+        </div>
+        
+        <p class="question">Gender</p>
+        <div class="form-control gender">
+          
+          <label for="male">
+            <input type="radio" id="male" name="gender" value="male">
+            Male
+          </label>
+          
+          <label for="female">
+            <input type="radio" id="female" name="gender" value="female">
+            Female
+          </label>
+          
+          <label for="non-binary">
+            <input type="radio" id="non-binary" name="gender" value="non-binary">
+            Non-binary
+          </label>
+          
+          <label for="prefer-not">
+            <input type="radio" id="prefer-not" name="gender" value="prefer-not">
+            Prefer not to say
+          </label>
+        </div>
+        
+        <p class="question">What is your current employment status?</p>
+        <div class="form-control">
+          <select name="" id="dropdown" class="input-area" placeholder="Select current role">
+            <option id="opt-placeholder" value="" disabled selected>Select your option</option>
+            <option value="fulltime">Full Time Job</option>
+            <option value="parttime">Part Time Job</option>
+            <option value="student">Student</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <p class="question">Which of the following websites are you aware of?</p> 
+        <p><span>(select as many as you like)</span></p>
+        <div class="form-control coding-sites">
+          <label for="site-freecodecamp" class="selectable">
+            <input type="checkbox" id="site-freecodecamp" name="coding-sites" value="site-freecodecamp">
+            FreeCodeCamp
+          </label>
+          <label for="site-codecademy" class="selectable">
+            <input type="checkbox" id="site-codecademy" name="coding-sites" value="site-codecademy">
+            Codecademy
+          </label>
+          <label for="site-khanacademy" class="selectable">
+            <input type="checkbox" id="site-khanacademy" name="coding-sites" value="site-khanacademy">
+            Khan Academy
+          </label>
+          <label for="site-w3schools" class="selectable">
+            <input type="checkbox" id="site-w3schools" name="coding-sites" value="site-w3schools">
+            W3Schools
+          </label>
+          <label for="site-udacity" class="selectable">
+            <input type="checkbox" id="site-udacity" name="coding-sites" value="site-udacity">
+            Udacity
+          </label>
+          <label for="site-scrimba" class="selectable">
+            <input type="checkbox" id="site-scrimba" name="coding-sites" value="site-scrimba">
+            Scrimba
+          </label>
+          <label for="site-mdn" class="selectable">
+            <input type="checkbox" id="site-mdn" name="coding-sites" value="site-mdn">
+            MDN Web Docs (Mozilla Developer Network)
+          </label>
+          <label for="site-coursera" class="selectable">
+            <input type="checkbox" id="site-coursera" name="coding-sites" value="site-coursera">
+            Coursera
+          </label>
+          <label for="site-udemy" class="selectable">
+            <input type="checkbox" id="site-udemy" name="coding-sites" value="site-udemy">
+            Udemy
+          </label>
+          <label for="site-skillcrush" class="selectable">
+            <input type="checkbox" id="site-skillcrush" name="coding-sites" value="site-skillcrush">
+            Skillcrush
+          </label>
+          <label for="site-tutsplus" class="selectable">
+            <input type="checkbox" id="site-tutsplus" name="coding-sites" value="site-tutsplus">
+            Tuts+
+          </label>
+          <label for="site-skillshare" class="selectable">
+            <input type="checkbox" id="site-skillshare" name="coding-sites" value="site-skillshare">
+            Skillshare
+          </label>
+          <label for="site-none" class="selectable">
+            <input type="checkbox" id="site-none" name="coding-sites" value="site-none">
+            None of the above
+          </label>
+        </div>
+        
+        <!-- LIKERT -->
+        <p class="question">Please rate your understanding of the following languages:</p>
+        <div class="form-control likert-scale">
+          
+          <div class="likert">
+            <label class="question">HTML</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-html" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-html" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-html" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-html" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-html" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="likert">
+            <label class="question">CSS</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-css" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-css" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-css" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-css" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-css" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+            
+          <div class="likert">
+            <label class="question">JavaScript</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-js" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-js" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-js" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-js" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-js" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="likert">
+            <label class="question">PHP</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-php" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-php" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-php" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-php" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-php" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="likert">
+            <label class="question">SQL</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-sql" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-sql" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-sql" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-sql" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-sql" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="likert">
+            <label class="question">Python</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-python" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-python" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-python" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-python" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-python" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="likert">
+            <label class="question">Ruby</label>
+            <ul>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-ruby" value="none" checked>
+                  None
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-ruby" value="beginner">
+                  Beginner
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-ruby" value="average">
+                  Average
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-ruby" value="strong">
+                  Strong
+                </label>
+              </li>
+              <li>
+                <label class="selectable">
+                  <input type="radio" name="likert-ruby" value="expert">Expert
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <p class="question">What is your preferred method of online learning?</p> 
+        <p><span>(select one)</span></p>
+        <div class="form-control method">
+          
+          <label for="video-tutorial">
+            <input type="radio" id="video-tutorial" name="learning-method" value="video-tutorial">
+            Video Tutorials
+          </label>
+          
+          <label for="text-tutorial">
+            <input type="radio" id="text-tutorial" name="learning-method" value="text-tutorial">
+            Written Tutorials
+          </label>
+          
+          <label for="interactive-screencast">
+            <input type="radio" id="interactive-screencast" name="learning-method" value="interactive-screencast">
+            Interactive Screencast
+          </label>
+          
+          <label for="other-tutorial">
+            <input type="radio" id="other-tutorial" name="learning-method" value="other-tutorial">
+            Other
+          </label>
+          
+          
+        </div>
+        
+        <div class="form-control">
+          <p class="question">If you selected 'other', please describe below</p>
+          <textarea class="input-area" name="message" placeholder="enter your preferred method here"></textarea> 
+        </div>
+        <div class="form-control">
+          <!-- <input type="submit" value="Submit"> -->
+          <button type="submit" id="submit" class="input-area">
+            Submit
+          </button>
+        </div>
+        
+      </form>
+    </div>
+    <div id="back-link">
+    <span>
+      <a href="/index.html">
+        <small>Back to Portfolio</small>
+      </a>
+    </span>
+    
+    <span id="photo-credit">Photo by <a href="https://unsplash.com/@sxoxm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="-blank">Sven Mieke</a> on <a href="https://unsplash.com/collections/18347608/tech/8e08542bbff02394eb67abecd7c271be?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="-blank">Unsplash</a></span>
+    </div>
+  </main>
+  
+</body>
+<script src="./JS/app.js"></script>
+</html>
