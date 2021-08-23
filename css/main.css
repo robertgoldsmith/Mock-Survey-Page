@@ -41,7 +41,9 @@
   --neutral-l: rgba(167, 220, 207, 1);
   --neutral-d: rgba(90, 140, 127, 1);
   --primary:  rgba(238,97,35,1);
-  --primary-l: rgba(241, 118, 65, 1);
+  --primary-l: rgba(241, 118, 65, 0.9);
+  
+  --gradient: linear-gradient(90deg, #a7dccf, #9dd8c2, #95cd98, #a7b75a, #c89723, #e4731a, #ee6123);
 }
 
 /* ---------------- 
@@ -98,7 +100,6 @@ a {
   margin: 4em 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   max-width: 35.556em;
-  /* 640px */
 }
 
 #survey-form {
@@ -116,7 +117,7 @@ a {
 }
 
 
-#back-link {
+#photo-credit{
   display: flex;
   padding-bottom: 2em;
   justify-content: space-between;
@@ -321,9 +322,8 @@ progress bar
 }
 
 .progress-bar {
-  height: 0.5em;
+  height: 0.75em;
   background: var(--neutral-l);
-  background: linear-gradient(90deg, var(--neutral-l) 0%, var(--primary) 100%);
+  background: var(--gradient);
   width: 0%;
 }
-/*# sourceMappingURL=main.css.map */
